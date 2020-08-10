@@ -1,0 +1,52 @@
+{
+  "name": "neornd",
+  "version": "1.0.0",
+  "description": "Export random number with crypto",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "docs": "./node_modules/.bin/jsdoc ./src",
+    "format": "prettier --write src/ test/"
+  },
+  "keywords": [
+    "crypto",
+    "neornd",
+    "random",
+    "math",
+    "simplify",
+    "number"
+  ],
+  "author": "Kota Yatagai",
+  "license": "MIT",
+  "dependencies": {
+    "biguint-format": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "jsdoc": "^3.6.5",
+    "lint-staged": "^10.2.11",
+    "mocha": "^8.1.1",
+    "prettier": "^2.0.5"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "prettier": {
+    "useTabs": false,
+    "singleQuote": true,
+    "semi": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  }
+}
