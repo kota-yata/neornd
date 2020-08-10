@@ -1,4 +1,5 @@
 # neornd
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c11072c7-7117-4c85-9a57-99dd75e8bf96/deploy-status)](https://app.netlify.com/sites/neornd/deploys)
 
 neornd make Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.
 
@@ -48,3 +49,4 @@ $ npm run format
 
 ## LICENSE
 MIT
+See [LICENSE](https://github.com/kota-yata/neornd/blob/master/LICENSE)
