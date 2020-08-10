@@ -3,6 +3,8 @@
 
 neornd make Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.
 
+**[Document Website](https://neornd.netlify.app/)**
+
 ## USAGE
 
 ```
