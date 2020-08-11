@@ -51,12 +51,5 @@
       "pre-commit": "lint-staged"
     }
   },
-  "prettier": {
-    "useTabs": false,
-    "singleQuote": true,
-    "semi": true,
-    "tabWidth": 2,
-    "printWidth": 120
-  },
   "homepage": "https://neornd.netlify.app/"
 }
