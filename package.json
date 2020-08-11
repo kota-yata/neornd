@@ -41,10 +41,7 @@
     "prettier": "^2.0.5"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix"
-    ]
+    "*.js": "eslint --cache --fix"
   },
   "husky": {
     "hooks": {
