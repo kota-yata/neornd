@@ -52,6 +52,7 @@ $ npm run docs
 
 ```
 $ npm run prettier:format
+$ npm run eslint:format
 ```
 
 ## LICENSE
