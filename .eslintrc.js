@@ -12,10 +12,13 @@ module.exports = {
   },
   rules: {
     'linebreak-style': ['error', 'unix'],
-    "no-var": "error",
-    "prefer-const": "error",
-    "object-shorthand": "error",
-    "prefer-arrow-callback": "error",
+    indent: ['error', 2],
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
+    'no-var': 'error',
+    'prefer-const': 'error',
+    'object-shorthand': 'error',
+    'prefer-arrow-callback': 'error',
     'prettier/prettier': [
       'error',
       {
