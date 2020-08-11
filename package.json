@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha",
     "docs": "./node_modules/.bin/jsdoc ./src README.md",
-    "format": "prettier --write src/ test/"
+    "eslint:format": "eslint --fix *.js",
+    "prettier:format": "prettier '**/*.{js,jsx,ts,tsx,vue}' --write"
   },                                                 
   "repository": {
     "type": "git",

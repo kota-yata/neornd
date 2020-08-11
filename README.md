@@ -51,7 +51,7 @@ $ npm run docs
 #### format code
 
 ```
-$ npm run format
+$ npm run prettier:format
 ```
 
 ## LICENSE
