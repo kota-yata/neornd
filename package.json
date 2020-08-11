@@ -8,7 +8,7 @@
     "docs": "./node_modules/.bin/jsdoc ./src README.md",
     "eslint:format": "eslint --fix *.js",
     "prettier:format": "prettier '**/*.{js,jsx,ts,tsx,vue}' --write"
-  },                                                 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kota-yata/neornd.git"
@@ -38,6 +38,7 @@
     "jsdoc": "^3.6.5",
     "lint-staged": "^10.2.11",
     "mocha": "^8.1.1",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.0.5"
   },
   "lint-staged": {
@@ -50,6 +51,13 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "prettier": {
+    "useTabs": false,
+    "singleQuote": true,
+    "semi": true,
+    "tabWidth": 2,
+    "printWidth": 120
   },
   "homepage": "https://neornd.netlify.app/"
 }
