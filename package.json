@@ -1,6 +1,6 @@
 {
   "name": "neornd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Export random number with crypto",
   "main": "src/index.js",
   "scripts": {
@@ -41,7 +41,10 @@
     "prettier": "^2.0.5"
   },
   "lint-staged": {
-    "*.js": ["prettier '**/*.{js,jsx,ts,tsx,vue}' --write", "eslint --fix"]
+    "*.js": [
+      "prettier '**/*.{js,jsx,ts,tsx,vue}' --write",
+      "eslint --fix"
+    ]
   },
   "husky": {
     "hooks": {
