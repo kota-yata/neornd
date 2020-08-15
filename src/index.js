@@ -17,24 +17,24 @@ const magenta = '\u001b[35m';
 const red = '\u001b[31m';
 
 /**
+ * @param {string} str - Words you want to show in red
+ * @return {NaN} Return NaN
+ */
+const ErrorDetect = (str) => {
+  console.error(`${magenta}Warning from neornd : ${red}${str}${reset}`);
+  return NaN;
+};
+
+/**
  * @param {number} min - Minimam number you want
  * @param {number} max - Maximam number you want
  * @param {number} round - The number of digits to appear after the decimal point.
  * @return {number} Return random number with number of digits you want
  **/
 const neornd = (min, max, round) => {
-  if (round < 0) {
-    console.error(`${magenta}Warning from neornd : ${red}The minimum number of 3rd argument is 0.${reset}`);
-    return NaN;
-  }
-  if (round > 307) {
-    console.error(`${magenta}Warning from neornd : ${red}The maximum number of 3rd argument is 307.${reset}`);
-    return NaN;
-  }
-  if (min > max) {
-    console.error(`${magenta}Warning from neornd : ${red}1st argument must be smaller than 2nd argument.${reset}`);
-    return NaN;
-  }
+  if (round < 0) return ErrorDetect('The minimum number of 3rd argument is 0.');
+  if (round > 307) return ErrorDetect('The maximum number of 3rd argument is 307.');
+  if (min > max) return ErrorDetect('1st argument must be smaller than 2nd argument.');
   const max_value_of_4byte = 4294967295; // Math.pow(2, 32) - 1 (32bits)
   const number_for_rounding = Math.pow(10, round);
   const num_in_range =

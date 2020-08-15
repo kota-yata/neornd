@@ -1,11 +1,11 @@
-const q = null;
+var q = null;
 window.PR_SHOULD_USE_CONTINUATION = !0;
 (function () {
   function L(a) {
     function m(a) {
-      let f = a.charCodeAt(0);
+      var f = a.charCodeAt(0);
       if (f !== 92) return f;
-      const b = a.charAt(1);
+      var b = a.charAt(1);
       return (f = r[b])
         ? f
         : '0' <= b && b <= '7'
@@ -46,7 +46,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
             d < 97 || j > 122 || b.push([Math.max(97, j) & -33, Math.min(d, 122) & -33]));
         }
       }
-      b.sort((a, f) => {
+      b.sort(function (a, f) {
         return a[0] - f[0] || f[1] - a[1];
       });
       f = [];
@@ -89,7 +89,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
             j.length >= 2 && a === '['
               ? (f[c] = h(j))
               : a !== '\\' &&
-                (f[c] = j.replace(/[A-Za-z]/g, (a) => {
+                (f[c] = j.replace(/[A-Za-z]/g, function (a) {
                   a = a.charCodeAt(0);
                   return '[' + String.fromCharCode(a & -33, a | 32) + ']';
                 }));
@@ -174,7 +174,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
         d += f.length;
         if (c) {
           c = o[1];
-          let j = f.indexOf(c),
+          var j = f.indexOf(c),
             k = j + c.length;
           o[2] && ((k = f.length - o[2].length), (j = k - c.length));
           b = b.substring(5);
@@ -189,9 +189,9 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
       y;
     (function () {
       for (var e = a.concat(m), l = [], p = {}, d = 0, g = e.length; d < g; ++d) {
-        let r = e[d],
+        var r = e[d],
           n = r[3];
-        if (n) for (let k = n.length; --k >= 0; ) h[n.charAt(k)] = r;
+        if (n) for (var k = n.length; --k >= 0; ) h[n.charAt(k)] = r;
         r = r[1];
         n = '' + r;
         p.hasOwnProperty(n) || (l.push(r), (p[n] = q));
@@ -203,7 +203,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
     return e;
   }
   function u(a) {
-    const m = [],
+    var m = [],
       e = [];
     a.tripleQuotedStrings
       ? m.push([
@@ -221,7 +221,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
         ])
       : m.push(['str', /^(?:'(?:[^\n\r'\\]|\\.)*(?:'|$)|"(?:[^\n\r"\\]|\\.)*(?:"|$))/, q, '"\'']);
     a.verbatimStrings && e.push(['str', /^@"(?:[^"]|"")*(?:"|$)/, q]);
-    let h = a.hashComments;
+    var h = a.hashComments;
     h &&
       (a.cStyleComments
         ? (h > 1
@@ -285,7 +285,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
           var f = b(f, 1),
             g = a.nextSibling;
           f.appendChild(e);
-          for (let h = g; h; h = g) (g = h.nextSibling), f.appendChild(h);
+          for (var h = g; h; h = g) (g = h.nextSibling), f.appendChild(h);
         }
         return e;
       }
@@ -304,7 +304,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
     for (l = s.createElement('LI'); a.firstChild; ) l.appendChild(a.firstChild);
     for (var d = [l], g = 0; g < d.length; ++g) e(d[g]);
     m === (m | 0) && d[0].setAttribute('value', m);
-    const r = s.createElement('OL');
+    var r = s.createElement('OL');
     r.className = 'linenums';
     for (var n = Math.max(0, (m - 1) | 0) || 0, g = 0, z = d.length; g < z; ++g)
       (l = d[g]),
@@ -314,8 +314,8 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
     a.appendChild(r);
   }
   function k(a, m) {
-    for (let e = m.length; --e >= 0; ) {
-      const h = m[e];
+    for (var e = m.length; --e >= 0; ) {
+      var h = m[e];
       A.hasOwnProperty(h) ? window.console && console.warn('cannot override language handler %s', h) : (A[h] = a);
     }
   }
@@ -344,7 +344,7 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
         g = d.length,
         a = 0;
       d[g] = s;
-      let r, n;
+      var r, n;
       for (n = r = 0; n < g; ) d[n] !== d[n + 2] ? ((d[r++] = d[n++]), (d[r++] = d[n++])) : (n += 2);
       g = r;
       for (n = r = 0; n < g; ) {
@@ -362,10 +362,10 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
         if (i.nodeType !== 1 && (j = t.substring(e, b))) {
           k && (j = j.replace(m, '\r'));
           i.nodeValue = j;
-          const u = i.ownerDocument,
+          var u = i.ownerDocument,
             v = u.createElement('SPAN');
           v.className = d[a + 1];
-          const x = i.parentNode;
+          var x = i.parentNode;
           x.replaceChild(v, i);
           v.appendChild(i);
           e < o && ((l[h + 1] = i = u.createTextNode(t.substring(b, o))), x.insertBefore(i, v.nextSibling));
@@ -499,15 +499,15 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
   );
   k(x([], [['str', /^[\S\s]+/]]), ['regex']);
   window.prettyPrintOne = function (a, m, e) {
-    const h = document.createElement('PRE');
+    var h = document.createElement('PRE');
     h.innerHTML = a;
     e && D(h, e);
-    E({ g: m, i: e, h });
+    E({ g: m, i: e, h: h });
     return h.innerHTML;
   };
   window.prettyPrint = function (a) {
     function m() {
-      for (let e = window.PR_SHOULD_USE_CONTINUATION ? l.now() + 250 : Infinity; p < h.length && l.now() < e; p++) {
+      for (var e = window.PR_SHOULD_USE_CONTINUATION ? l.now() + 250 : Infinity; p < h.length && l.now() < e; p++) {
         var n = h[p],
           k = n.className;
         if (k.indexOf('prettyprint') >= 0) {
@@ -552,12 +552,12 @@ window.PR_SHOULD_USE_CONTINUATION = !0;
       k < e.length;
       ++k
     )
-      for (let t = 0, s = e[k].length; t < s; ++t) h.push(e[k][t]);
+      for (var t = 0, s = e[k].length; t < s; ++t) h.push(e[k][t]);
     var e = q,
       l = Date;
     l.now ||
       (l = {
-        now() {
+        now: function () {
           return +new Date();
         },
       });

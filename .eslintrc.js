@@ -17,7 +17,6 @@ module.exports = {
     semi: ['error', 'always'],
     'no-var': 'error',
     'prefer-const': 'error',
-    'object-shorthand': 'error',
     'prefer-arrow-callback': 'error',
     'prettier/prettier': [
       'error',
