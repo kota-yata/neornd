@@ -1,0 +1,6 @@
+{
+    "opts": {
+        "title": "npm | neornd",
+        "template": "node_modules/clean-jsdoc-theme"
+    }
+}

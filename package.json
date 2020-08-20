@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
-    "docs": "./node_modules/.bin/jsdoc ./src README.md",
+    "docs": "node_modules/.bin/jsdoc ./src README.md --configure conf.json --verbose",
+    "lint": "run-s eslint:format prettier:format",
     "eslint:format": "eslint --fix *.js",
     "prettier:format": "prettier '**/*.{js,jsx,ts,tsx,vue}' --write"
   },
@@ -27,7 +28,8 @@
     "url": "https://github.com/kota-yata/neornd/issues"
   },
   "dependencies": {
-    "biguint-format": "^1.0.2"
+    "biguint-format": "^1.0.2",
+    "clean-jsdoc-theme": "^2.2.11"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -38,11 +40,12 @@
     "jsdoc": "^3.6.5",
     "lint-staged": "^10.2.11",
     "mocha": "^8.1.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5"
   },
   "lint-staged": {
     "*.js": [
-      "prettier '**/*.{js,jsx,ts,tsx,vue}' --write",
+      "prettier '**/*.{js}' --write",
       "eslint --fix"
     ]
   },

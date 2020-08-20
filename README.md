@@ -13,7 +13,7 @@ neornd make Math.random() simple and safe by using crypto module. You can get a 
 ## USAGE
 
 ```
-$ npm install neornd
+npm install neornd
 ```
 
 ```javascript
@@ -33,26 +33,26 @@ This mean 1st/2nd argument must be smaller than 1.797693e+308 and greater than 2
 #### install
 
 ```
-$ npm install
+npm install
 ```
 
 #### test
 
 ```
-$ npm test
+npm test
 ```
 
 #### update docs
 
 ```
-$ npm run docs
+npm run docs
 ```
 
 #### format code
 
 ```
-$ npm run prettier:format
-$ npm run eslint:format
+npm run prettier:format
+npm run eslint:format
 ```
 
 ## LICENSE

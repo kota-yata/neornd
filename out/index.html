@@ -2,32 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>npm | neornd</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/search.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script> -->
+    <script src="scripts/fuse.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/ionicons.min.css">
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
     <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme.css">
+    
+    
+    
+<svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/>
+                <path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>
 
+</head>
 <body>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html"><div class="text">neornd</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#neornd">neornd</a></li></ul></div>
+</nav>
 
 <div id="main">
-
-    <h1 class="page-title">Home</h1>
+    
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
 
 
 
@@ -40,9 +65,7 @@
     
 
 
-
-
-    <section>
+    <section class="readme">
         <article><h1>neornd</h1>
 <p><a href="https://nodei.co/npm/neornd/"><img src="https://nodei.co/npm/neornd.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="NPM"></a></p>
 <p><a href="https://app.netlify.com/sites/neornd/deploys"><img src="https://api.netlify.com/api/v1/badges/c11072c7-7117-4c85-9a57-99dd75e8bf96/deploy-status" alt="Netlify Status"></a>
@@ -52,7 +75,7 @@
 <p>neornd make Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.</p>
 <p><strong><a href="https://neornd.netlify.app/">Document Website</a></strong></p>
 <h2>USAGE</h2>
-<pre class="prettyprint source"><code>$ npm install neornd
+<pre class="prettyprint source"><code>npm install neornd
 </code></pre>
 <pre class="prettyprint source lang-javascript"><code>const neornd = require(&quot;neornd&quot;);
 // neornd.get(min num, max num, num of decimal places)
@@ -64,17 +87,17 @@ console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g
 <p>This mean 1st/2nd argument must be smaller than 1.797693e+308 and greater than 2.225074e-308. 3rd argument must be integer, and must be smaller than 308 and greater than 0.</p>
 <h2>DEVELOPMENT</h2>
 <h4>install</h4>
-<pre class="prettyprint source"><code>$ npm install
+<pre class="prettyprint source"><code>npm install
 </code></pre>
 <h4>test</h4>
-<pre class="prettyprint source"><code>$ npm test
+<pre class="prettyprint source"><code>npm test
 </code></pre>
 <h4>update docs</h4>
-<pre class="prettyprint source"><code>$ npm run docs
+<pre class="prettyprint source"><code>npm run docs
 </code></pre>
 <h4>format code</h4>
-<pre class="prettyprint source"><code>$ npm run prettier:format
-$ npm run eslint:format
+<pre class="prettyprint source"><code>npm run prettier:format
+npm run eslint:format
 </code></pre>
 <h2>LICENSE</h2>
 <p>MIT
@@ -88,17 +111,20 @@ See <a href="https://github.com/kota-yata/neornd/blob/master/LICENSE">LICENSE</a
 
 </div>
 
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#neornd">neornd</a></li></ul>
-</nav>
-
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Sat Aug 15 2020 19:10:46 GMT+0900 (GMT+09:00)
+  
 </footer>
 
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script>
+var list = [{"title":"ErrorDetect","link":"<a href=\"global.html#ErrorDetect\">Global &rtrif; ErrorDetect</a>"},{"title":"GetRandomDecimal","link":"<a href=\"global.html#GetRandomDecimal\">Global &rtrif; GetRandomDecimal</a>"},{"title":"neornd","link":"<a href=\"global.html#neornd\">Global &rtrif; neornd</a>"}];
+setupSearch(list)
+</script>
+
+ 
+<script type="text/javascript" src="scripts/misc.js"></script>
 </body>
 </html>
