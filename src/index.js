@@ -4,6 +4,7 @@ const format = require('biguint-format');
 const crypto = require('crypto');
 
 /**
+ * Get random number with random digits
  * @param {number} quantity - Number of byte to make random decimal
  * @return {number} Return random number
  */
@@ -17,6 +18,7 @@ const magenta = '\u001b[35m';
 const red = '\u001b[31m';
 
 /**
+ * Notify argument error
  * @param {string} str - Words you want to show in red
  * @return {NaN} Return NaN
  */
@@ -26,6 +28,7 @@ const ErrorDetect = (str) => {
 };
 
 /**
+ * Convert random number generated at GetRandomDecimal() to number in specified range
  * @param {number} min - Minimam number you want
  * @param {number} max - Maximam number you want
  * @param {number} round - The number of digits to appear after the decimal point.

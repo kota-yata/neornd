@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/51294895/90326709-866c8900-dfc6-11ea-80ed-f57d529fa80d.png)
+# neornd
 
 [![NPM](https://nodei.co/npm/neornd.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/neornd/)
 
