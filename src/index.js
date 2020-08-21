@@ -74,7 +74,7 @@ module.exports = class neornd {
    **/
   static get(min, max, round) {
     if (round < 0) return ErrorDetect('The minimum number of 3rd argument is 0.');
-    if (round > 16) return ErrorDetect('3rd argument is too big. Maximum call stack size may be exceeded.');
+    if (round > 14) return ErrorDetect('3rd argument is too big. Maximum call stack size may be exceeded.');
     if (min > max) return ErrorDetect('1st argument must be smaller than 2nd argument.');
     const result = GetRandomWithSpecifiedDigits(min, max, round);
     return result;
