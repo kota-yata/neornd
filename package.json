@@ -1,6 +1,6 @@
 {
   "name": "neornd",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Export random number with crypto",
   "main": "src/index.js",
   "scripts": {
