@@ -42,7 +42,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html"><div class="text">Home</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#neornd">neornd</a></li></ul></div>
+    <h2><a href="index.html"><div class="text">Home</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Modules</h3><ul><li><a href="module-neornd.html">neornd</a><ul class='methods'><li data-type='method'><a href="module-neornd.html#.get">get</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#GetRandomWithSpecifiedDigits">GetRandomWithSpecifiedDigits</a></li><li><a href="global.html#isCorrectDigits">isCorrectDigits</a></li></ul></div>
 </nav>
 
 <div id="main">
@@ -192,7 +192,7 @@
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="index.js.html">index.js</a>, <a href="index.js.html#line25">line 25</a>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line57">line 57</a>
             </li></ul></dd>
         </div>
     
@@ -351,7 +351,7 @@
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="index.js.html">index.js</a>, <a href="index.js.html#line11">line 11</a>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line15">line 15</a>
             </li></ul></dd>
         </div>
     
@@ -407,14 +407,14 @@
 
     
 
-    <h4 class="name" id="neornd"><span class="type-signature"></span>neornd<span class="signature">(min, max, round)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="GetRandomWithSpecifiedDigits"><span class="type-signature"></span>GetRandomWithSpecifiedDigits<span class="signature">(min, max, round)</span><span class="type-signature"> &rarr; {number}</span></h4>
 
     
 
 
 
     <div class="description">
-        Convert random number generated at GetRandomDecimal() to number in specified range
+        Get random number with specified digits after decimal point.
     </div>
 
 
@@ -467,7 +467,7 @@
 
             
 
-            <td class="description last">Minimam number you want</td>
+            <td class="description last">Min arg inherited from neornd()</td>
         </tr>
 
     
@@ -490,7 +490,7 @@
 
             
 
-            <td class="description last">Maximam number you want</td>
+            <td class="description last">Max arg inherited from neornd()</td>
         </tr>
 
     
@@ -513,7 +513,7 @@
 
             
 
-            <td class="description last">The number of digits to appear after the decimal point.</td>
+            <td class="description last">Round arg inherited from neornd()</td>
         </tr>
 
     
@@ -556,7 +556,7 @@
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="index.js.html">index.js</a>, <a href="index.js.html#line37">line 37</a>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line27">line 27</a>
             </li></ul></dd>
         </div>
     
@@ -585,7 +585,7 @@
         
             
 <div class="param-desc">
-    Return random number with number of digits you want
+    Return random number with specified digits certainly.
 </div>
 
 
@@ -597,6 +597,188 @@
     <dd>
         
 <span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="isCorrectDigits"><span class="type-signature"></span>isCorrectDigits<span class="signature">(rndnum, digits)</span><span class="type-signature"> &rarr; {boolean}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        Check if the number of digits after decimal point of 1st arg is same as the number of 2nd arg.
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>rndnum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Random number you generated</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>digits</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Number of digits you want</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line43">line 43</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    If the number of digits after decimal point  of 1st arg is the same as the number of 2nd arg, return true.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
 
 
     </dd>
@@ -631,7 +813,7 @@
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
 <script>
-var list = [{"title":"ErrorDetect","link":"<a href=\"global.html#ErrorDetect\">Global &rtrif; ErrorDetect</a>"},{"title":"GetRandomDecimal","link":"<a href=\"global.html#GetRandomDecimal\">Global &rtrif; GetRandomDecimal</a>"},{"title":"neornd","link":"<a href=\"global.html#neornd\">Global &rtrif; neornd</a>"}];
+var list = [{"title":"neornd","link":"<a href=\"module-neornd.html\">neornd</a>"},{"title":"module:neornd.get","link":"<a href=\"module-neornd.html#.get\">module:neornd.get &rtrif; undefined</a>"},{"title":"ErrorDetect","link":"<a href=\"global.html#ErrorDetect\">Global &rtrif; ErrorDetect</a>"},{"title":"GetRandomDecimal","link":"<a href=\"global.html#GetRandomDecimal\">Global &rtrif; GetRandomDecimal</a>"},{"title":"GetRandomWithSpecifiedDigits","link":"<a href=\"global.html#GetRandomWithSpecifiedDigits\">Global &rtrif; GetRandomWithSpecifiedDigits</a>"},{"title":"isCorrectDigits","link":"<a href=\"global.html#isCorrectDigits\">Global &rtrif; isCorrectDigits</a>"}];
 setupSearch(list)
 </script>
 

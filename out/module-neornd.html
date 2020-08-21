@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>index.js</title>
+    <title>neornd</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -47,101 +47,262 @@
 
 <div id="main">
     
-    <h1 class="page-title">index.js</h1>
+    <h1 class="page-title">neornd</h1>
     
 
     
 
 
 
+
+<section>
+
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>'use strict';
+        
+    
+</header>
 
-const format = require('biguint-format');
-const crypto = require('crypto');
 
-const COLOR_RESET = '\u001b[0m';
-const COLOR_MAGENTA = '\u001b[35m';
-const COLOR_RED = '\u001b[31m';
+<article>
+    <div class="container-overview">
+    
+        
 
-/**
- * Get random number with random digits
- * @param {number} quantity - Number of byte to make random decimal
- * @return {number} Return random number
- */
-const GetRandomDecimal = (quantity) => {
-  const x_byte_buffer = crypto.randomBytes(quantity);
-  return format(x_byte_buffer, 'dec');
-};
+        
+    
+    </div>
 
-/**
- * Get random number with specified digits after decimal point.
- * @param {number} min - Min arg inherited from neornd()
- * @param {number} max - Max arg inherited from neornd()
- * @param {number} round - Round arg inherited from neornd()
- * @return {number} Return random number with specified digits certainly.
- */
-const GetRandomWithSpecifiedDigits = (min, max, round) => {
-  const MAX_VALUE_OF_4BYTES = 4294967295; // Math.pow(2, 32) - 1 (32bits)
-  const number_for_rounding = Math.pow(10, round);
-  const num_in_range =
-    Math.round(((GetRandomDecimal(4) / MAX_VALUE_OF_4BYTES) * (max - min) + min) * number_for_rounding) /
-    number_for_rounding;
-  if (isCorrectDigits(num_in_range, round)) return num_in_range;
-  return GetRandomWithSpecifiedDigits(min, max, round);
-};
+    
 
-/**
- * Check if the number of digits after decimal point of 1st arg is same as the number of 2nd arg.
- * @param {number} rndnum - Random number you generated
- * @param {number} digits - Number of digits you want
- * @return {boolean} If the number of digits after decimal point  of 1st arg is the same as the number of 2nd arg, return true.
- */
-const isCorrectDigits = (rndnum, digits) => {
-  const REGEX_TO_GET_DIGIT = /\.(.+?)$/;
-  const numAfterDecimalPoint = rndnum.toString().match(REGEX_TO_GET_DIGIT);
-  let lengthOfDigits = 0;
-  if (numAfterDecimalPoint !== null) lengthOfDigits = numAfterDecimalPoint[1].length;
-  if (lengthOfDigits === digits) return true;
-  return false;
-};
+    
 
-/**
- * Notify argument error
- * @param {string} str - Words you want to show in red
- * @return {NaN} Return NaN
- */
-const ErrorDetect = (str) => {
-  console.error(`${COLOR_MAGENTA}Error from neornd!! : ${COLOR_RED}${str}${COLOR_RESET}`);
-  return NaN;
-};
+    
 
-/**
- * @module neornd
- * @example
- * const neornd = require('neornd');
- */
-module.exports = class neornd {
-  /**
-   * Convert random number generated at GetRandomDecimal() to number in specified range
-   * @param {number} min - Minimam number you want
-   * @param {number} max - Maximam number you want
-   * @param {number} round - The number of digits to appear after the decimal point.
-   * @return {number} Return random number with number of digits you want
-   **/
-  static get(min, max, round) {
-    if (round &lt; 0) return ErrorDetect('The minimum number of 3rd argument is 0.');
-    if (round > 16) return ErrorDetect('3rd argument is too big. Maximum call stack size may be exceeded.');
-    if (min > max) return ErrorDetect('1st argument must be smaller than 2nd argument.');
-    const result = GetRandomWithSpecifiedDigits(min, max, round);
-    return result;
-  }
-};
-</code></pre>
-        </article>
-    </section>
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".get"><span class="type-signature">(static) </span>get<span class="signature">(min, max, round)</span><span class="type-signature"> &rarr; {number}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        Convert random number generated at GetRandomDecimal() to number in specified range
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>min</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Minimam number you want</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Maximam number you want</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>round</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of digits to appear after the decimal point.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line75">line 75</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    Return random number with number of digits you want
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
