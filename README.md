@@ -27,7 +27,7 @@ console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g
 ## ATTENTION
 This module use [double type number](https://docs.microsoft.com/ja-jp/dotnet/visual-basic/language-reference/data-types/double-data-type), so maximum number is ```1.797693e+308```, minimum number is ```2.225074e-308```. 
 
-This mean 1st/2nd argument must be smaller than 1.797693e+308 and greater than 2.225074e-308. 3rd argument must be integer, and must be smaller than 308 and greater than 0.
+This mean 1st/2nd argument must be smaller than 1.797693e+308 and greater than 2.225074e-308. 3rd argument must be integer, and must be smaller than 16 (to avoid stack overflow) and greater than 0.
 
 ## DEVELOPMENT
 
@@ -52,10 +52,10 @@ npm run docs
 #### format code
 
 ```
-npm run prettier:format
-npm run eslint:format
+npm run lint
 ```
 
 ## LICENSE
 MIT
+
 See [LICENSE](https://github.com/kota-yata/neornd/blob/master/LICENSE)
