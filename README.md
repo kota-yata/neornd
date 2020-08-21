@@ -1,5 +1,4 @@
 # neornd
-
 [![NPM](https://nodei.co/npm/neornd.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/neornd/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c11072c7-7117-4c85-9a57-99dd75e8bf96/deploy-status)](https://app.netlify.com/sites/neornd/deploys)
@@ -7,7 +6,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.com/kota-yata/neornd.svg?branch=master)](https://travis-ci.com/kota-yata/neornd)
 
-neornd make Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.
+<img src='https://user-images.githubusercontent.com/51294895/90859152-97503c80-e3c2-11ea-8eda-f8b88feb1ecb.png' style='width:800px' />
+
+neornd makes Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.
 
 **[Document Website](https://neornd.netlify.app/)**
 
