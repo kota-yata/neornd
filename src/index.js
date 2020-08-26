@@ -1,6 +1,5 @@
 'use strict';
 
-const format = require('biguint-format');
 const crypto = require('crypto');
 
 const COLOR_RESET = '\u001b[0m';
@@ -14,8 +13,11 @@ const COLOR_RED = '\u001b[31m';
  */
 const GetRandomDecimal = (quantity) => {
   const x_byte_buffer = crypto.randomBytes(quantity);
-  return format(x_byte_buffer, 'dec');
+  const hex = x_byte_buffer.toString('hex');
+  return parseInt(hex, 16);
 };
+
+console.log(GetRandomDecimal(4));
 
 /**
  * Get random number with specified digits after decimal point.
