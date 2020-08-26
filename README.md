@@ -12,9 +12,13 @@
 neornd makes Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.
 
 ## USAGE
-
+### Install
 ```
 npm i neornd
+```
+or
+```javascript
+<script src="https://cdn.jsdelivr.net/npm/neornd@2.0.5/src/index.min.js" integrity="sha384-duZX6zBHJGXfip6Pqgdpjnn2+w8fb/9wKv/m0KYlztam1NM/Zw1t/3AkKxEYsx8s" crossorigin="anonymous"></script>
 ```
 
 ```javascript
@@ -27,12 +31,11 @@ console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g
 //neornd.string(length, options)
 const random_str = neornd.string(10, {uppercase: false, symbol: false}) // => 10 digit string including lowercase and number e.g. 'fa78d7g8ss'
 ```
-<div style="background:#333333; padding:5px;">
-<h2 style="color:#e31b4e; background:#222222; text-align:center; font-weight:bold;">! ATTENTION !</h2>
-<h3 style="text-align:center; font-weight:bold">About neornd.number()</h3>
-This module use <a href="https://docs.microsoft.com/ja-jp/dotnet/visual-basic/language-reference/data-types/double-data-type">double type number</a>, so maximum number is <code>1.797693e+308</code>, minimum number is <code>2.225074e-308</code>. 
+## ! ATTENTION !
+### About neornd.number()
+This module use [double type number](https://docs.microsoft.com/ja-jp/dotnet/visual-basic/language-reference/data-types/double-data-type), so maximum number is ```1.797693e+308```, minimum number is ```2.225074e-308```. 
 
-3rd argument must be integer, and<b style="color:#e31b4e"> must be smaller than 14 (to avoid stack overflow) and greater than 0.</b></div>
+3rd argument must be integer, and<b style="color:#e31b4e"> must be smaller than 14 (to avoid stack overflow) and greater than 0.</b>
 
 **See [Document Website](https://neornd.netlify.app/module-neornd.html) for more details**
 
