@@ -42,7 +42,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html"><div class="text">Home</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Modules</h3><ul><li><a href="module-neornd.html">neornd</a><ul class='methods'><li data-type='method'><a href="module-neornd.html#.get">get</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#GetRandomWithSpecifiedDigits">GetRandomWithSpecifiedDigits</a></li><li><a href="global.html#isCorrectDigits">isCorrectDigits</a></li></ul></div>
+    <h2><a href="index.html"><div class="text">Home</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Modules</h3><ul><li><a href="module-neornd.html">neornd</a><ul class='methods'><li data-type='method'><a href="module-neornd.html#.number">number</a></li><li data-type='method'><a href="module-neornd.html#.string">string</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#GetRandomStringWithSpecifiedLength">GetRandomStringWithSpecifiedLength</a></li><li><a href="global.html#GetRandomWithSpecifiedDigits">GetRandomWithSpecifiedDigits</a></li><li><a href="global.html#isCorrectDigits">isCorrectDigits</a></li><li><a href="global.html#MakeUsableString">MakeUsableString</a></li><li><a href="global.html#optionsDefaultObject">optionsDefaultObject</a></li></ul></div>
 </nav>
 
 <div id="main">
@@ -94,14 +94,14 @@
 
     
 
-    <h4 class="name" id=".get"><span class="type-signature">(static) </span>get<span class="signature">(min, max, round)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id=".number"><span class="type-signature">(static) </span>number<span class="signature">(min, max, round)</span><span class="type-signature"> &rarr; {number}</span></h4>
 
     
 
 
 
     <div class="description">
-        Convert random number generated at GetRandomDecimal() to number in specified range
+        Generate random number with number of digits after decimal point you want
     </div>
 
 
@@ -200,7 +200,7 @@
 
             
 
-            <td class="description last">The number of digits to appear after the decimal point.</td>
+            <td class="description last">The number of digits to appear after the decimal point</td>
         </tr>
 
     
@@ -243,7 +243,7 @@
         <div class="details-item-container">
             <dt class="tag-source">Source:</dt>
             <dd class="tag-source"><ul class="dummy"><li>
-                <a href="index.js.html">index.js</a>, <a href="index.js.html#line75">line 75</a>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line121">line 121</a>
             </li></ul></dd>
         </div>
     
@@ -272,7 +272,7 @@
         
             
 <div class="param-desc">
-    Return random number with number of digits you want
+    Return random number with number of digits after decimal point you want
 </div>
 
 
@@ -284,6 +284,188 @@
     <dd>
         
 <span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+ 
+    </div>
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".string"><span class="type-signature">(static) </span>string<span class="signature">(length, options)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+    <div class="description">
+        Generate random string with specified length
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container flex flex-col w-100 overflow-auto mt-20">
+        <strong>Parameters:</strong>
+        
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>length</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Length of string you want to get</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Types you want to include in string [lowercase, uppercase, number, symbol]</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class="details-item-container">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source"><ul class="dummy"><li>
+                <a href="index.js.html">index.js</a>, <a href="index.js.html#line135">line 135</a>
+            </li></ul></dd>
+        </div>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="method-member-container mt-20">
+    <strong>Returns:</strong>
+        
+            
+<div class="param-desc">
+    Return random string including specified types
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
 
 
     </dd>
@@ -318,7 +500,7 @@
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
 <script>
-var list = [{"title":"neornd","link":"<a href=\"module-neornd.html\">neornd</a>"},{"title":"module:neornd.get","link":"<a href=\"module-neornd.html#.get\">module:neornd.get &rtrif; undefined</a>"},{"title":"ErrorDetect","link":"<a href=\"global.html#ErrorDetect\">Global &rtrif; ErrorDetect</a>"},{"title":"GetRandomDecimal","link":"<a href=\"global.html#GetRandomDecimal\">Global &rtrif; GetRandomDecimal</a>"},{"title":"GetRandomWithSpecifiedDigits","link":"<a href=\"global.html#GetRandomWithSpecifiedDigits\">Global &rtrif; GetRandomWithSpecifiedDigits</a>"},{"title":"isCorrectDigits","link":"<a href=\"global.html#isCorrectDigits\">Global &rtrif; isCorrectDigits</a>"}];
+var list = [{"title":"neornd","link":"<a href=\"module-neornd.html\">neornd</a>"},{"title":"module:neornd.number","link":"<a href=\"module-neornd.html#.number\">module:neornd.number &rtrif; undefined</a>"},{"title":"module:neornd.string","link":"<a href=\"module-neornd.html#.string\">module:neornd.string &rtrif; undefined</a>"},{"title":"ErrorDetect","link":"<a href=\"global.html#ErrorDetect\">Global &rtrif; ErrorDetect</a>"},{"title":"GetRandomDecimal","link":"<a href=\"global.html#GetRandomDecimal\">Global &rtrif; GetRandomDecimal</a>"},{"title":"GetRandomStringWithSpecifiedLength","link":"<a href=\"global.html#GetRandomStringWithSpecifiedLength\">Global &rtrif; GetRandomStringWithSpecifiedLength</a>"},{"title":"GetRandomWithSpecifiedDigits","link":"<a href=\"global.html#GetRandomWithSpecifiedDigits\">Global &rtrif; GetRandomWithSpecifiedDigits</a>"},{"title":"isCorrectDigits","link":"<a href=\"global.html#isCorrectDigits\">Global &rtrif; isCorrectDigits</a>"},{"title":"MakeUsableString","link":"<a href=\"global.html#MakeUsableString\">Global &rtrif; MakeUsableString</a>"},{"title":"optionsDefaultObject","link":"<a href=\"global.html#optionsDefaultObject\">Global &rtrif; optionsDefaultObject</a>"}];
 setupSearch(list)
 </script>
 

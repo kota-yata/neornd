@@ -21,8 +21,8 @@ npm install neornd
 
 ```javascript
 const neornd = require("neornd");
-// neornd.get(min num, max num, num of decimal places)
-const random_num = neornd.get(1,10,3);
+// neornd.number(min num, max num, num of decimal places)
+const random_num = neornd.number(1,10,3);
 console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g. 5.342
 ```
 

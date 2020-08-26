@@ -42,7 +42,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html"><div class="text">Home</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Modules</h3><ul><li><a href="module-neornd.html">neornd</a><ul class='methods'><li data-type='method'><a href="module-neornd.html#.get">get</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#GetRandomWithSpecifiedDigits">GetRandomWithSpecifiedDigits</a></li><li><a href="global.html#isCorrectDigits">isCorrectDigits</a></li></ul></div>
+    <h2><a href="index.html"><div class="text">Home</div></a></h2><div class="search-box"><input type="text" placeholder="Search..." id="search-box" /><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-list-div"><h3>Modules</h3><ul><li><a href="module-neornd.html">neornd</a><ul class='methods'><li data-type='method'><a href="module-neornd.html#.number">number</a></li><li data-type='method'><a href="module-neornd.html#.string">string</a></li></ul></li></ul><h3><a href="global.html">Global</a></h3><ul><li><a href="global.html#ErrorDetect">ErrorDetect</a></li><li><a href="global.html#GetRandomDecimal">GetRandomDecimal</a></li><li><a href="global.html#GetRandomStringWithSpecifiedLength">GetRandomStringWithSpecifiedLength</a></li><li><a href="global.html#GetRandomWithSpecifiedDigits">GetRandomWithSpecifiedDigits</a></li><li><a href="global.html#isCorrectDigits">isCorrectDigits</a></li><li><a href="global.html#MakeUsableString">MakeUsableString</a></li><li><a href="global.html#optionsDefaultObject">optionsDefaultObject</a></li></ul></div>
 </nav>
 
 <div id="main">
@@ -71,15 +71,17 @@
 <p><a href="https://app.netlify.com/sites/neornd/deploys"><img src="https://api.netlify.com/api/v1/badges/c11072c7-7117-4c85-9a57-99dd75e8bf96/deploy-status" alt="Netlify Status"></a>
 <a href="https://badge.fury.io/js/neornd"><img src="https://badge.fury.io/js/neornd.svg" alt="npm version"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-<a href="https://travis-ci.com/kota-yata/neornd"><img src="https://travis-ci.com/kota-yata/neornd.svg?branch=master" alt="Build Status"></a></p>
-<p>neornd make Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.</p>
+<a href="https://travis-ci.com/kota-yata/neornd"><img src="https://travis-ci.com/kota-yata/neornd.svg?branch=master" alt="Build Status"></a>
+<img src="https://img.shields.io/npm/dt/neornd" alt="npm"></p>
+<img src='https://user-images.githubusercontent.com/51294895/90859152-97503c80-e3c2-11ea-8eda-f8b88feb1ecb.png' style='width:800px' />
+<p>neornd makes Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.</p>
 <p><strong><a href="https://neornd.netlify.app/">Document Website</a></strong></p>
 <h2>USAGE</h2>
 <pre class="prettyprint source"><code>npm install neornd
 </code></pre>
 <pre class="prettyprint source lang-javascript"><code>const neornd = require(&quot;neornd&quot;);
-// neornd.get(min num, max num, num of decimal places)
-const random_num = neornd.get(1,10,3);
+// neornd.number(min num, max num, num of decimal places)
+const random_num = neornd.number(1,10,3);
 console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g. 5.342
 </code></pre>
 <h2>ATTENTION</h2>
@@ -119,7 +121,7 @@ console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g
 <script>prettyPrint();</script>
 <script src="scripts/linenumber.js"></script>
 <script>
-var list = [{"title":"neornd","link":"<a href=\"module-neornd.html\">neornd</a>"},{"title":"module:neornd.get","link":"<a href=\"module-neornd.html#.get\">module:neornd.get &rtrif; undefined</a>"},{"title":"ErrorDetect","link":"<a href=\"global.html#ErrorDetect\">Global &rtrif; ErrorDetect</a>"},{"title":"GetRandomDecimal","link":"<a href=\"global.html#GetRandomDecimal\">Global &rtrif; GetRandomDecimal</a>"},{"title":"GetRandomWithSpecifiedDigits","link":"<a href=\"global.html#GetRandomWithSpecifiedDigits\">Global &rtrif; GetRandomWithSpecifiedDigits</a>"},{"title":"isCorrectDigits","link":"<a href=\"global.html#isCorrectDigits\">Global &rtrif; isCorrectDigits</a>"}];
+var list = [{"title":"neornd","link":"<a href=\"module-neornd.html\">neornd</a>"},{"title":"module:neornd.number","link":"<a href=\"module-neornd.html#.number\">module:neornd.number &rtrif; undefined</a>"},{"title":"module:neornd.string","link":"<a href=\"module-neornd.html#.string\">module:neornd.string &rtrif; undefined</a>"},{"title":"ErrorDetect","link":"<a href=\"global.html#ErrorDetect\">Global &rtrif; ErrorDetect</a>"},{"title":"GetRandomDecimal","link":"<a href=\"global.html#GetRandomDecimal\">Global &rtrif; GetRandomDecimal</a>"},{"title":"GetRandomStringWithSpecifiedLength","link":"<a href=\"global.html#GetRandomStringWithSpecifiedLength\">Global &rtrif; GetRandomStringWithSpecifiedLength</a>"},{"title":"GetRandomWithSpecifiedDigits","link":"<a href=\"global.html#GetRandomWithSpecifiedDigits\">Global &rtrif; GetRandomWithSpecifiedDigits</a>"},{"title":"isCorrectDigits","link":"<a href=\"global.html#isCorrectDigits\">Global &rtrif; isCorrectDigits</a>"},{"title":"MakeUsableString","link":"<a href=\"global.html#MakeUsableString\">Global &rtrif; MakeUsableString</a>"},{"title":"optionsDefaultObject","link":"<a href=\"global.html#optionsDefaultObject\">Global &rtrif; optionsDefaultObject</a>"}];
 setupSearch(list)
 </script>
 
