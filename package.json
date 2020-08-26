@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha",
-    "docs": "node_modules/.bin/jsdoc ./src README.md",
+    "docs": "node_modules/.bin/jsdoc ./src README.md -d ../npm-docs/neornd -c .jsdoc.json --verbose",
     "lint": "run-s eslint:format prettier:format",
     "eslint:format": "eslint --fix *.js　--ignore-path .gitignore",
     "prettier:format": "prettier '**/*.{js,jsx,ts,tsx,vue}' --write"
@@ -57,5 +57,8 @@
     "tabWidth": 2,
     "printWidth": 120
   },
-  "homepage": "https://neornd.netlify.app/"
+  "homepage": "https://neornd.netlify.app/",
+  "dependencies": {
+    "braintree-jsdoc-template": "^3.3.0"
+  }
 }

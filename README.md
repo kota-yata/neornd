@@ -18,7 +18,7 @@ npm i neornd
 ```
 or
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/neornd@2.0.5/src/index.min.js" integrity="sha384-duZX6zBHJGXfip6Pqgdpjnn2+w8fb/9wKv/m0KYlztam1NM/Zw1t/3AkKxEYsx8s" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/neornd@{X.X.X}/src/index.min.js" integrity="sha384-duZX6zBHJGXfip6Pqgdpjnn2+w8fb/9wKv/m0KYlztam1NM/Zw1t/3AkKxEYsx8s" crossorigin="anonymous"></script>
 ```
 
 ```javascript
