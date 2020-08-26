@@ -75,18 +75,25 @@
 <img src="https://img.shields.io/npm/dt/neornd" alt="npm"></p>
 <img src='https://user-images.githubusercontent.com/51294895/90859152-97503c80-e3c2-11ea-8eda-f8b88feb1ecb.png' style='width:800px' />
 <p>neornd makes Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.</p>
-<p><strong><a href="https://neornd.netlify.app/">Document Website</a></strong></p>
 <h2>USAGE</h2>
-<pre class="prettyprint source"><code>npm install neornd
+<pre class="prettyprint source"><code>npm i neornd
 </code></pre>
 <pre class="prettyprint source lang-javascript"><code>const neornd = require(&quot;neornd&quot;);
+
 // neornd.number(min num, max num, num of decimal places)
 const random_num = neornd.number(1,10,3);
 console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g. 5.342
+
+//neornd.string(length, options)
+const random_str = neornd.string(10, {uppercase: false, symbol: false}) // => 10 digit string including lowercase and number e.g. 'fa78d7g8ss'
 </code></pre>
-<h2>ATTENTION</h2>
-<p>This module use <a href="https://docs.microsoft.com/ja-jp/dotnet/visual-basic/language-reference/data-types/double-data-type">double type number</a>, so maximum number is <code>1.797693e+308</code>, minimum number is <code>2.225074e-308</code>.</p>
-<p>This mean 1st/2nd argument must be smaller than 1.797693e+308 and greater than 2.225074e-308. 3rd argument must be integer, and must be smaller than 14 (to avoid stack overflow) and greater than 0.</p>
+<div style="background:#333333; padding:5px;">
+<h2 style="color:#e31b4e; background:#222222; text-align:center; font-weight:bold;">! ATTENTION !</h2>
+<h3 style="text-align:center; font-weight:bold">About neornd.number()</h3>
+This module use <a href="https://docs.microsoft.com/ja-jp/dotnet/visual-basic/language-reference/data-types/double-data-type">double type number</a>, so maximum number is <code>1.797693e+308</code>, minimum number is <code>2.225074e-308</code>. 
+<p>3rd argument must be integer, and<b style="color:#e31b4e"> must be smaller than 14 (to avoid stack overflow) and greater than 0.</b></div></p>
+<p><strong>See <a href="https://neornd.netlify.app/module-neornd.html">Document Website</a> for more details</strong></p>
+<hr>
 <h2>DEVELOPMENT</h2>
 <h4>install</h4>
 <pre class="prettyprint source"><code>npm install
@@ -102,7 +109,9 @@ console.log(random_num); // => number between 1 and 10 with 3 decimal places e.g
 </code></pre>
 <h2>LICENSE</h2>
 <p>MIT</p>
-<p>See <a href="https://github.com/kota-yata/neornd/blob/master/LICENSE">LICENSE</a></p></article>
+<p>See <a href="https://github.com/kota-yata/neornd/blob/master/LICENSE">LICENSE</a></p>
+<h2>HOW TO CONTRIBUTE</h2>
+<p>If you find bugs, feel free to create issue and PR :) I will look at it ASAP.</p></article>
     </section>
 
 
