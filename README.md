@@ -7,7 +7,7 @@
 [![Build Status](https://travis-ci.com/kota-yata/neornd.svg?branch=master)](https://travis-ci.com/kota-yata/neornd)
 ![npm](https://img.shields.io/npm/dt/neornd)
 
-<img src='https://user-images.githubusercontent.com/51294895/90859152-97503c80-e3c2-11ea-8eda-f8b88feb1ecb.png' style='width:800px' />
+![img](https://user-images.githubusercontent.com/51294895/90859152-97503c80-e3c2-11ea-8eda-f8b88feb1ecb.png)
 
 neornd makes Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.
 
