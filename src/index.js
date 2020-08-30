@@ -17,8 +17,6 @@ const GetRandomDecimal = (quantity) => {
   return parseInt(hex, 16);
 };
 
-console.log(GetRandomDecimal(4));
-
 /**
  * Get random number with specified digits after decimal point.
  * @param {number} min - Min arg inherited from neornd.number()
