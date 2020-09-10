@@ -7,8 +7,6 @@
 [![Build Status](https://travis-ci.com/kota-yata/neornd.svg?branch=master)](https://travis-ci.com/kota-yata/neornd)
 ![npm](https://img.shields.io/npm/dt/neornd)
 
-![img](https://user-images.githubusercontent.com/51294895/90859152-97503c80-e3c2-11ea-8eda-f8b88feb1ecb.png)
-
 neornd makes Math.random() simple and safe by using crypto module. You can get a random number with number of decimal place you want easily.
 
 ## USAGE
@@ -18,7 +16,7 @@ npm i neornd
 ```
 or
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/neornd@{X.X.X}/src/index.min.js" integrity="sha384-duZX6zBHJGXfip6Pqgdpjnn2+w8fb/9wKv/m0KYlztam1NM/Zw1t/3AkKxEYsx8s" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/neornd@2.2.1/src/index.min.js" integrity="sha384-hFENMcGOo/m3gHWpuOR3jI8d6Z8YyuUdXHCcLCYSUQjKVXXq2byrkcSreiQTyC+p" crossorigin="anonymous"></script>
 ```
 
 ```javascript

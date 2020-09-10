@@ -7,7 +7,7 @@
     "test": "mocha",
     "docs": "node_modules/.bin/jsdoc ./src README.md -d ../npm-docs/neornd -c .jsdoc.json --verbose",
     "lint": "run-s eslint:format prettier:format",
-    "eslint:format": "eslint --fix *.js　--ignore-path .gitignore",
+    "eslint:format": "eslint --fix src/*.js --ignore-path .gitignore",
     "prettier:format": "prettier '**/*.{js,jsx,ts,tsx,vue}' --write"
   },
   "repository": {
