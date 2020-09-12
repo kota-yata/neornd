@@ -18,7 +18,8 @@ npm i neornd
 ```
 or
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/neornd@2.2.1/src/index.min.js" integrity="sha384-hFENMcGOo/m3gHWpuOR3jI8d6Z8YyuUdXHCcLCYSUQjKVXXq2byrkcSreiQTyC+p" crossorigin="anonymous"></script>
+// SRI is recommended
+<script src="https://cdn.jsdelivr.net/npm/neornd@2.3.0/src/index.min.js"></script>
 ```
 
 ```javascript
