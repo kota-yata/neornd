@@ -2,6 +2,7 @@
 
 const calcNumber = require('./calcNumber.js');
 const generateString = require('./generateString.js');
+const sort = require('./sort.js');
 
 const COLOR_RESET = '\u001b[0m';
 const COLOR_MAGENTA = '\u001b[35m';
@@ -32,7 +33,7 @@ module.exports = class neornd {
    **/
   static number(min, max, round) {
     if (round < 0) return ErrorDetect('The minimum number of 3rd argument is 0.');
-    if (round > 14) return ErrorDetect('3rd argument is too big. Maximum call stack size may be exceeded.');
+    if (round > 10) return ErrorDetect('3rd argument is too big. Maximum call stack size may be exceeded.');
     if (min > max) return ErrorDetect('1st argument must be smaller than 2nd argument.');
     const result = calcNumber.GetRandomWithSpecifiedDigits(min, max, round);
     return result;
@@ -54,5 +55,16 @@ module.exports = class neornd {
       optionsObject[key] = value;
     }
     return generateString.GetRandomStringWithSpecifiedLength(length, optionsObject);
+  }
+
+  /**
+   * Sort input string randomly
+   * @param {string} str - String you want to sort randomly
+   * @return {string} Return string sorted randomly
+   */
+  static sort(str) {
+    if (typeof str !== 'string') return ErrorDetect('Argument must be string type.');
+    const result = sort.sortArray(str);
+    return result;
   }
 };
