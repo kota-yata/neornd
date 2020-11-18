@@ -6,7 +6,7 @@ const calcNumber = require('./calcNumber.js');
  * @param {string} str - String you want to sort randomly
  * @return {string} Return string sorted randomly
  */
-const sortArray = (str) => {
+const sortArrayRandomly = (str) => {
   const targetArray = [...str];
   const endOfArray = targetArray.length - 1;
   for (let i = endOfArray; i > 0; i--) {
@@ -18,5 +18,5 @@ const sortArray = (str) => {
 };
 
 module.exports = {
-  sortArray,
+  sortArrayRandomly,
 };

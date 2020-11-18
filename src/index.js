@@ -2,19 +2,15 @@
 
 const calcNumber = require('./calcNumber.js');
 const generateString = require('./generateString.js');
-const sort = require('./sort.js');
-
-const COLOR_RESET = '\u001b[0m';
-const COLOR_MAGENTA = '\u001b[35m';
-const COLOR_RED = '\u001b[31m';
+const sort = require('./sortRandomly.js');
 
 /**
  * Notify argument error
- * @param {string} str - Words you want to show in red
+ * @param {string} str - Words to show in red
  * @return {undefined} Return undefined
  */
 const ErrorDetect = (str) => {
-  console.error(`${COLOR_MAGENTA}Error from neornd!! : ${COLOR_RED}${str}${COLOR_RESET}`);
+  console.error(`Error from neornd!! : ${str}`);
   return undefined;
 };
 
@@ -64,7 +60,7 @@ module.exports = class neornd {
    */
   static sort(str) {
     if (typeof str !== 'string') return ErrorDetect('Argument must be string type.');
-    const result = sort.sortArray(str);
+    const result = sort.sortArrayRandomly(str);
     return result;
   }
 };
