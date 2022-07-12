@@ -120,3 +120,23 @@ describe('neornd.sort() : Error Detection', () => {
     chai.assert.deepEqual(neornd.sort({ Unko: true, Shonben: false }), undefined);
   });
 });
+
+// describe('neornd.bigint(): Length Check', () => {
+//   for (let i = 0; i < 10; i++) {
+//     it('Small: 45bytes to 60bytes', () => {
+//       const valToCheck = neornd.bigint(45, 60);
+//       console.log(valToCheck);
+//       console.log(valToCheck > 35184372088832n);
+//       console.log(valToCheck < 1152921504606846976n);
+//     });
+//   }
+// });
+
+for (let i = 0; i < 10; i++) {
+  it('Small: 45bytes to 60bytes', () => {
+    const valToCheck = neornd.bigint(45, 60);
+    console.log(valToCheck);
+    console.log(valToCheck > 35184372088832n);
+    console.log(valToCheck < 1152921504606846976n);
+  });
+}
