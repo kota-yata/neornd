@@ -1,8 +1,8 @@
-const chai = require('chai');
-const neornd = require('../src/index');
+import chai from 'chai';
+import neornd from '../src/index.js';
 
 describe('neornd.number() : Min Check', () => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('Basic : 1-100-0', () => {
       chai.assert.isAtLeast(neornd.number(1, 100, 0), 1);
     });
@@ -19,7 +19,7 @@ describe('neornd.number() : Min Check', () => {
 });
 
 describe('neornd.number() : Max Check', () => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('Basic : 1-100-0', () => {
       chai.assert.isAtMost(neornd.number(1, 100, 0), 100);
     });
@@ -43,7 +43,7 @@ describe('neornd.number() : Digits Check', () => {
     if (numAfterDecimalPoint === null) return 0;
     return numAfterDecimalPoint[1].length;
   };
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('Basic : 1-100-4', () => {
       chai.assert.deepEqual(CheckDigits(1, 100, 4), 4);
     });
@@ -57,7 +57,7 @@ describe('neornd.number() : Digits Check', () => {
 });
 
 describe('neornd.number() : Error Detection', () => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('Error! 1st arg is greater than 2nd arg : 1--2-10', () => {
       chai.assert.deepEqual(neornd.number(1, -2, 10), undefined);
     });
@@ -77,7 +77,7 @@ describe('neornd.number() : Error Detection', () => {
 });
 
 describe('neornd.string() : Length Check', () => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('Great : 10000-none', () => {
       chai.assert.deepEqual(neornd.string(10000).length, 10000);
     });
@@ -88,7 +88,7 @@ describe('neornd.string() : Length Check', () => {
 });
 
 describe('neornd.string() : Error Detection', () => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('Error! 1st argument is negative', () => {
       chai.assert.deepEqual(neornd.string(-10), undefined);
     });
@@ -102,7 +102,7 @@ describe('neornd.string() : Error Detection', () => {
 });
 
 describe('neornd.sort() : Length Check', () => {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('Great : as^f34%6ne{gE3W:fv/w?>MWw4RC8m3q8FF^S90sdfg#@!qqqqqqqqqq', () => {
       chai.assert.deepEqual(neornd.sort('as^f34%6ne{gE3W:fv/w?>MWw4RC8m3q8FF^S90sdfg#@!qqqqqqqqqq').length, 56);
     });

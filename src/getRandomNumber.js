@@ -1,6 +1,4 @@
-'use strict';
-
-const crypto = require('crypto');
+import crypto from 'crypto';
 
 /**
  * Get random number with random digits
@@ -20,14 +18,14 @@ const GetRandomDecimal = (quantity) => {
  * @param {number} round - Round arg inherited from neornd()
  * @return {number} Return random number with specified digits certainly.
  */
-const GetRandomWithSpecifiedDigits = (min, max, round) => {
+export const getRandomNumber = (min, max, round) => {
   const MAX_VALUE_OF_4BYTES = 4294967295; // Math.pow(2, 32) - 1 (32bits)
   const number_for_rounding = Math.pow(10, round);
   const num_in_range =
     Math.round(((GetRandomDecimal(4) / MAX_VALUE_OF_4BYTES) * (max - min) + min) * number_for_rounding) /
     number_for_rounding;
   if (isCorrectDigits(num_in_range, round)) return num_in_range;
-  return GetRandomWithSpecifiedDigits(min, max, round);
+  return getRandomNumber(min, max, round);
 };
 
 /**
@@ -43,8 +41,4 @@ const isCorrectDigits = (rndnum, digits) => {
   if (numAfterDecimalPoint !== null) lengthOfDigits = numAfterDecimalPoint[1].length;
   if (lengthOfDigits === digits) return true;
   return false;
-};
-
-module.exports = {
-  GetRandomWithSpecifiedDigits,
 };

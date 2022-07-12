@@ -1,11 +1,11 @@
 'use strict';
 
-const calcNumber = require('./calcNumber.js');
+import { getRandomNumber } from './getRandomNumber.js';
 
 /**
  * Default parameters of neornd.string()
  */
-const optionsDefaultObject = {
+export const optionsDefaultObject = {
   lowercase: true,
   uppercase: true,
   number: true,
@@ -37,18 +37,13 @@ const MakeUsableString = (obj) => {
  * @param {*} optionsObject - Options arg inherited from neornd.string()
  * @return Return neornd.string() a random string with specified length
  */
-const GetRandomStringWithSpecifiedLength = (length, optionsObject) => {
+export const getRandomString = (length, optionsObject) => {
   const usableString = MakeUsableString(optionsObject);
   const lastIndexOfUsableString = usableString.length - 1;
   let randomString = '';
   for (let i = 0; i < length; i++) {
-    const randomInt = calcNumber.GetRandomWithSpecifiedDigits(0, lastIndexOfUsableString, 0);
+    const randomInt = getRandomNumber(0, lastIndexOfUsableString, 0);
     randomString += usableString[randomInt];
   }
   return randomString;
-};
-
-module.exports = {
-  optionsDefaultObject,
-  GetRandomStringWithSpecifiedLength,
 };

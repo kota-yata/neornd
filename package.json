@@ -23,6 +23,7 @@
     "number"
   ],
   "author": "Kota Yatagai",
+  "type": "module",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kota-yata/neornd/issues"
@@ -41,8 +42,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier '**/*.{js,jsx,ts,tsx,vue}' --write",
-      "eslint --fix　--ignore-path .gitignore"
+      "prettier '**/*.{js,ts}' --write",
+      "eslint --fix --ignore-path .gitignore"
     ]
   },
   "husky": {
@@ -50,14 +51,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "prettier": {
-    "useTabs": false,
-    "singleQuote": true,
-    "semi": true,
-    "tabWidth": 2,
-    "printWidth": 120
-  },
-  "homepage": "https://neornd.netlify.app/",
   "dependencies": {
     "braintree-jsdoc-template": "^3.3.0"
   }
