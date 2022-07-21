@@ -2,13 +2,17 @@
   "name": "neornd",
   "version": "2.4.1",
   "description": "Export random number with crypto",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "mocha",
-    "docs": "node_modules/.bin/jsdoc ./src README.md -d ../npm-docs/neornd -c .jsdoc.json --verbose",
-    "lint": "run-s eslint:format prettier:format",
-    "eslint:format": "eslint --fix src/*.js --ignore-path .gitignore",
-    "prettier:format": "prettier '**/*.{js,jsx,ts,tsx,vue}' --write"
+    "test": "jest",
+    "ts": "node --experimental-specifier-resolution=node --loader ts-node/esm src/index.ts",
+    "lint": "eslint ./ --ext '**/*.ts'",
+    "format": "yarn format:eslint && yarn format:prettier",
+    "format:eslint": "eslint --fix '**/*.ts'",
+    "format:prettier": "prettier --write '**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -29,29 +33,28 @@
     "url": "https://github.com/kota-yata/neornd/issues"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
     "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
-    "jsdoc": "^3.6.5",
+    "jest": "^28.1.3",
     "lint-staged": "^10.2.11",
-    "mocha": "^8.1.1",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "ts-jest": "^28.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier '**/*.{js,ts}' --write",
-      "eslint --fix --ignore-path .gitignore"
+    "*.ts": [
+      "yarn format"
     ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "dependencies": {
-    "braintree-jsdoc-template": "^3.3.0"
   }
 }
